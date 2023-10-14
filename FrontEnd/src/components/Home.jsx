@@ -1,9 +1,19 @@
+import './Home.css'
+
 
 function Home() {
 
     return (
         <>
-            <h1>Home page</h1>
+            <div className='containerDiv bg-gray-800'>
+                <h1 className='text-red-500 bg-gray-800'>Home page</h1>
+                <div>
+                    <h1>test</h1>
+                </div>
+                <div>
+
+                </div>
+            </div>
         </>
     )
 }
