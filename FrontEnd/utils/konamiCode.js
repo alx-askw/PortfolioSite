@@ -1,5 +1,5 @@
 //TODO: Maybe add a dirty system so it can only be activated once per reload?
-
+//TODO: add timer for key presses (e.g. don't press a key in 2 secs, it clears input array)
 
 import { jsonArrayCompare } from "./arrayComparisonFunctions";
 
@@ -11,11 +11,11 @@ export const konamiCodeFunc = (e) => {
     // console.log(test1)
     if (e.key === "Enter") {
         if (jsonArrayCompare(test1, correctTest)) {
-            console.log("konami success")
+            // console.log("konami success")
             test1 = []
             return true;
         } else {
-            console.log("failure")
+            // console.log("failure")
             // console.log(test1)
             // console.log(correctTest)
             test1 = []

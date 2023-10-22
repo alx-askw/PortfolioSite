@@ -23,9 +23,6 @@ function App() {
   }
 
 
-
-
-
   document.body.style.backgroundColor = 'rgb(31 41 55)'; //! perhaps don't keep this
 
   return (
