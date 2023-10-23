@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.projectsContainer {
+    font-family: 'Courier New', Courier, monospace;
+    color: #efe8e5;
+    font-size: 80px;
+    text-align: center;
+    line-height: 125px;
+    border-radius: 7px;
+    border: #efe8e5 2px solid;
+    opacity: 0.93;
+    /* margin: 225px 465px 150px 465px; matches navbar */
+    margin: 225px 350px 150px 350px;
+}
+
+.projectHeader {
+    text-align: left;
+    font-size: 90px
+}

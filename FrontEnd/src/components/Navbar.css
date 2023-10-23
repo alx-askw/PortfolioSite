@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.containerDiv {
+    color: #efe8e5;
+    margin: 15px 465px 0px 465px;
+    height: 125px;
+    /* font-family: 'Hind Vadodara'; */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 80px;
+    text-align: center;
+    line-height: 125px;
+    border-radius: 7px;
+    border: #efe8e5 2px solid;
+    opacity: 0.93;
+}

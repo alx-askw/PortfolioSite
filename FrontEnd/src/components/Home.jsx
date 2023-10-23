@@ -1,16 +1,16 @@
-import './Home.css'
-
+import './Home.css';
+import Navbar from './Navbar';
+import Links from './Links';
 
 function Home() {
 
+    const userLocation = {
+        loc: "~/portfolio/src/home"
+    }
     return (
         <>
-            <div className='containerDiv bg-gray-800'>
-                <h1 className='text-red-500 bg-gray-800'>Home page</h1>
-                <div>
-                    <h1>test</h1>
-                </div>
-            </div>
+            <Navbar userLocation={userLocation} ></Navbar>
+            <Links></Links>
         </>
     )
 }

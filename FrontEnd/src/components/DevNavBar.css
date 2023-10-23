@@ -1,0 +1,25 @@
+.devContainer {
+    float: left;
+    color: #efe8e5;
+    /* margin: 15px 50% 0px 10px; */
+    /* height: 125px; */
+    /* font-family: 'Hind Vadodara'; */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 80px;
+    text-align: center;
+    line-height: 125px;
+    border-radius: 7px;
+    border: #efe8e5 2px solid;
+    opacity: 0.93;
+    position: absolute;
+
+}
+
+.exitButton {
+    float: left;
+    font-size: 19px;
+    margin-left: 10px;
+    margin: 0px;
+}
+
+.devHeader {}
