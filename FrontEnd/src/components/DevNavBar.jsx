@@ -5,6 +5,7 @@ function DevNavBar({ setDevBarToggle }) {
 
     let Navigate = useNavigate();
 
+    //todo: add a credits modal for images: unsplash, fontAwesome etc.
 
     return (
         <>
@@ -17,6 +18,8 @@ function DevNavBar({ setDevBarToggle }) {
                     <h4>Jump Around</h4>
                     <h6 type="button" onClick={() => Navigate("/home")}>•/home</h6>
                     <h6 type="button" onClick={() => Navigate("/projects")}>•/projects</h6>
+                    <h6 type="button" onClick={() => Navigate("/CV")}>•/CV</h6>
+
                 </div>
                 <div>
                     <h4>Change Background</h4>

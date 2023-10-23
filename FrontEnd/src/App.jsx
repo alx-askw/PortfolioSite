@@ -7,6 +7,7 @@ import { konamiCodeFunc } from '../utils/konamiCode';
 import Home from './components/Home.jsx';
 import Projects from './components/Projects';
 import DevNavBar from './components/DevNavBar';
+import CV from './components/CV';
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
   document.body.style.backgroundSize = "cover";
   document.body.style.backgroundRepeat = "no-repeat";
 
+
   return (
     <>
       <div className=' text-red-500'>
@@ -43,6 +45,7 @@ function App() {
           <Route path='/' element={<Navigate to="/home" />} />
           <Route path='/home' element={<Home />} />
           <Route path='/projects' element={<Projects />} />
+          <Route path='/CV' element={<CV />} />
         </Routes>
       </div >
     </ >

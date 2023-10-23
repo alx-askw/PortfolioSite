@@ -7,6 +7,7 @@ function Home() {
     const userLocation = {
         loc: "~/portfolio/src/home"
     }
+
     return (
         <>
             <Navbar userLocation={userLocation} ></Navbar>
