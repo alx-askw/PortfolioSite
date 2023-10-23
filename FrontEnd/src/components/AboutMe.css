@@ -1,0 +1,9 @@
+.aboutContainer {
+    /* margin: 225px 950px 150px 465px; */
+    border: 2px solid blue;
+    width: 395px;
+    border-radius: 7px;
+    border: #efe8e5 2px solid;
+    opacity: 0.93;
+    color: #efe8e5;
+}

@@ -5,15 +5,13 @@ import { konamiCodeFunc } from '../utils/konamiCode';
 
 //COMPONENTS IMPORT
 import Home from './components/Home.jsx';
-import Links from './components/Links';
 import Projects from './components/Projects';
 import DevNavBar from './components/DevNavBar';
 
 
-
 function App() {
 
-  const [devBarToggle, setDevBarToggle] = useState(true);
+  const [devBarToggle, setDevBarToggle] = useState(false);
 
   const devToggleHandler = (boolState) => {
     setDevBarToggle(boolState);

@@ -1,9 +1,19 @@
-.linkContainer {
+.linkContainerOld {
     /* border: 2px rebeccapurple solid; */
     border-radius: 7px;
     border: #efe8e5 2px solid;
     opacity: 0.93;
     margin: 225px 465px 150px 950px;
 
+    color: #efe8e5;
+    /* float: right; */
+}
+
+.linkContainer {
+    width: 550px;
+    left: 0;
+    border-radius: 7px;
+    border: #efe8e5 2px solid;
+    opacity: 0.93;
     color: #efe8e5;
 }

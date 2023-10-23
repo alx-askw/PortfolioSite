@@ -1,7 +1,7 @@
 import './Home.css';
 import Navbar from './Navbar';
 import Links from './Links';
-
+import AboutMe from './AboutMe';
 function Home() {
 
     const userLocation = {
@@ -10,7 +10,10 @@ function Home() {
     return (
         <>
             <Navbar userLocation={userLocation} ></Navbar>
-            <Links></Links>
+            <div className='homeContainer'>
+                <AboutMe></AboutMe>
+                <Links></Links>
+            </div>
         </>
     )
 }
