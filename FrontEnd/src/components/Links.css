@@ -10,7 +10,8 @@
 }
 
 .linkContainer {
-    width: 550px;
+    /* width: 550px; */
+    width: 395px;
     left: 0;
     border-radius: 7px;
     border: #efe8e5 2px solid;
@@ -18,3 +19,18 @@
     color: #efe8e5;
     font-family: 'Courier New', Courier, monospace;
 }
+
+
+
+/* 
+for links on right
+        width: 550px;
+        left: 0;
+        border-radius: 7px;
+        border: #efe8e5 2px solid;
+        opacity: 0.93;
+        color: #efe8e5;
+        font-family: 'Courier New',
+        Courier,
+        monospace;
+*/

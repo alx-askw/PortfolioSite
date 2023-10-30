@@ -9,6 +9,7 @@ function AboutMe() {
                 <h5>•23</h5>
                 <h5>•Software engineer</h5>
                 <h5>•Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h5>
+                <h5>Technologies (badges?)</h5>
             </div>
         </>
     )

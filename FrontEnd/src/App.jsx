@@ -32,7 +32,7 @@ function App() {
 
 
   // document.body.style.backgroundColor = 'rgb(31 41 55)'; //! perhaps don't keep this
-  document.body.style.backgroundImage = "url(../src/assets/test11.jpg)"; //! why do I have to go out then back in to get this to work?
+  document.body.style.backgroundImage = "url(../src/assets/test12.jpg)"; //! why do I have to go out then back in to get this to work?
   document.body.style.backgroundSize = "cover";
   document.body.style.backgroundRepeat = "no-repeat";
 

@@ -1,10 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext');
+
 .aboutContainer {
     /* margin: 225px 950px 150px 465px; */
     border: 2px solid blue;
+    /* width: 395px; */
+    width: 550px;
+    border-radius: 7px;
+    border: #efe8e5 2px solid;
+    opacity: 0.93;
+    color: #efe8e5;
+    /* font-family: 'Courier New', Courier, monospace; */
+    font-family: monospace;
+    font-weight: lighter;
+}
+
+
+/*
+
+about me on left
+ border: 2px solid blue;
     width: 395px;
     border-radius: 7px;
     border: #efe8e5 2px solid;
     opacity: 0.93;
     color: #efe8e5;
-    font-family: 'Courier New', Courier, monospace;
-}
+    font-family: 'Courier New',
+    Courier,
+    monospace;
+     */

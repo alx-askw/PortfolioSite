@@ -12,8 +12,9 @@ function Home() {
         <>
             <Navbar userLocation={userLocation} ></Navbar>
             <div className='homeContainer'>
-                <AboutMe></AboutMe>
                 <Links></Links>
+                <AboutMe></AboutMe>
+
             </div>
         </>
     )
