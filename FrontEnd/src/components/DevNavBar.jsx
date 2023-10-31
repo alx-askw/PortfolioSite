@@ -25,6 +25,8 @@ function DevNavBar({ setDevBarToggle, setBackgroundPicture, backgroundImageVaria
                     <h4>Change Background</h4>
                     <h6 type="button" onClick={() => setBackgroundPicture(backgroundImageVariations.backgroundTwo)}>Forest 1</h6>
                     <h6 type="button" onClick={() => setBackgroundPicture(backgroundImageVariations.backgroundOne)}>Mountains 1</h6>
+                    <h6 type="button" onClick={() => setBackgroundPicture(backgroundImageVariations.backgroundThree)}>HB 1</h6>
+
 
                 </div>
             </div>

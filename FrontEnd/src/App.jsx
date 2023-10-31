@@ -8,6 +8,9 @@ import Home from './components/Home.jsx';
 import Projects from './components/Projects';
 import DevNavBar from './components/DevNavBar';
 import CV from './components/CV';
+import SocialLinks from './components/SocialLinks';
+
+//todo: refactor all of the components since a lot of them contain the same code/styling so clean this up
 
 
 function App() {
@@ -21,6 +24,8 @@ function App() {
   const backgroundImageVariations = {
     backgroundOne: document.body.style.backgroundImage = "url(../src/assets/test12.jpg)",
     backgroundTwo: document.body.style.backgroundImage = "url(../src/assets/test11.jpg)",
+    backgroundThree: document.body.style.backgroundImage = "url(../src/assets/test13.jpg)",
+
   }
   const [backgroundPicture, setBackgroundPicture] = useState(backgroundImageVariations.backgroundOne);
 
@@ -60,6 +65,7 @@ function App() {
           <Route path='/home' element={<Home />} />
           <Route path='/projects' element={<Projects />} />
           <Route path='/CV' element={<CV />} />
+          <Route path='/socials' element={<SocialLinks />} />
         </Routes>
       </div >
     </ >

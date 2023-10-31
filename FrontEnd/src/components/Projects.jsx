@@ -5,7 +5,8 @@ import ProjectBox from './ProjectsPageComponents/ProjectBox';
 
 function Projects() {
 
-    //todo: add scroll function inside right hand side box
+    //todo: add scroll function inside right hand side box (see CV page)
+    //todo: add links to github
     const userLocation = {
         loc: "~/alx-askw/projects",
         oldLoc: "~/projects",

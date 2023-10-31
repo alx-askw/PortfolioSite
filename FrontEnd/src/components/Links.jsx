@@ -15,7 +15,7 @@ function Links() {
         navigate("https://github.com/")
     }
 
-
+    //todo: add indicator of what page the user is on; maybe a '<' pointing to the current page
 
     return (
         <>

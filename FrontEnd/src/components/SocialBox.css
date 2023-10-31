@@ -1,4 +1,4 @@
-.cvBoxContainer {
+.socialContain {
     /* margin: 225px 950px 150px 465px; */
     border: 2px solid blue;
     /* width: 395px; */
@@ -11,7 +11,4 @@
     /* font-family: 'Courier New', Courier, monospace; */
     font-family: monospace;
     font-weight: lighter;
-
-    overflow-y: scroll;
-    height: 390px;
 }

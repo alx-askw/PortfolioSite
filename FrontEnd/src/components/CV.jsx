@@ -2,6 +2,9 @@ import Navbar from "./Navbar";
 import Links from "./Links";
 import CVBox from "./CVBox";
 
+import './CV.css'
+
+
 function CV() {
 
     const userLocation = {
@@ -13,7 +16,7 @@ function CV() {
     return (
         <>
             <Navbar userLocation={userLocation}></Navbar>
-            <div className="cvContainer">
+            <div className="cvContainer ">
                 <Links></Links>
                 <CVBox></CVBox>
             </div>
