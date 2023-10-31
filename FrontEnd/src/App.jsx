@@ -12,7 +12,20 @@ import CV from './components/CV';
 
 function App() {
 
+
+
   const [devBarToggle, setDevBarToggle] = useState(false);
+
+  //TODO##############################################################################
+  //Either use some kind of CDN or have in a database and fetch each image on request. This would be to avoid having the user have to download every background
+  const backgroundImageVariations = {
+    backgroundOne: document.body.style.backgroundImage = "url(../src/assets/test12.jpg)",
+    backgroundTwo: document.body.style.backgroundImage = "url(../src/assets/test11.jpg)",
+  }
+  const [backgroundPicture, setBackgroundPicture] = useState(backgroundImageVariations.backgroundOne);
+
+  //TODO##############################################################################
+
 
   const devToggleHandler = (boolState) => {
     setDevBarToggle(boolState);
@@ -32,7 +45,8 @@ function App() {
 
 
   // document.body.style.backgroundColor = 'rgb(31 41 55)'; //! perhaps don't keep this
-  document.body.style.backgroundImage = "url(../src/assets/test12.jpg)"; //! why do I have to go out then back in to get this to work?
+  // document.body.style.backgroundImage = "url(../src/assets/test12.jpg)"; //! why do I have to go out then back in to get this to work?
+  document.body.style.backgroundImage = backgroundPicture;
   document.body.style.backgroundSize = "cover";
   document.body.style.backgroundRepeat = "no-repeat";
 
@@ -40,7 +54,7 @@ function App() {
   return (
     <>
       <div className=' text-red-500'>
-        {devBarToggle && <DevNavBar setDevBarToggle={setDevBarToggle} />}
+        {devBarToggle && <DevNavBar setDevBarToggle={setDevBarToggle} setBackgroundPicture={setBackgroundPicture} backgroundImageVariations={backgroundImageVariations} />}
         <Routes>
           <Route path='/' element={<Navigate to="/home" />} />
           <Route path='/home' element={<Home />} />

@@ -1,7 +1,7 @@
 import './DevNavBar.css';
 import { useNavigate } from 'react-router-dom';
 
-function DevNavBar({ setDevBarToggle }) {
+function DevNavBar({ setDevBarToggle, setBackgroundPicture, backgroundImageVariations }) {
 
     let Navigate = useNavigate();
 
@@ -23,6 +23,8 @@ function DevNavBar({ setDevBarToggle }) {
                 </div>
                 <div>
                     <h4>Change Background</h4>
+                    <h6 type="button" onClick={() => setBackgroundPicture(backgroundImageVariations.backgroundTwo)}>Forest 1</h6>
+                    <h6 type="button" onClick={() => setBackgroundPicture(backgroundImageVariations.backgroundOne)}>Mountains 1</h6>
 
                 </div>
             </div>

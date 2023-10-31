@@ -1,18 +1,21 @@
 import Navbar from "./Navbar";
-
+import Links from "./Links";
+import CVBox from "./CVBox";
 
 function CV() {
 
     const userLocation = {
-        loc: "~/portfolio/src/CV"
+        loc: "~/alx-askw/CV"
     }
 
+
+    //todo: Add E-version of CV with link to PDF
     return (
         <>
-            <div>
-                <Navbar userLocation={userLocation}></Navbar>
-                <h1>Add E-version of CV with link to PDF</h1>
-                {/* <i class="fa-brands fa-linkedin"></i> */}
+            <Navbar userLocation={userLocation}></Navbar>
+            <div className="cvContainer">
+                <Links></Links>
+                <CVBox></CVBox>
             </div>
         </>
     )

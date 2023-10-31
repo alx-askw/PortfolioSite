@@ -1,19 +1,26 @@
 import './Projects.css'
 import Navbar from './Navbar'
+import Links from './Links';
+import ProjectBox from './ProjectsPageComponents/ProjectBox';
 
 function Projects() {
 
+    //todo: add scroll function inside right hand side box
     const userLocation = {
-        loc: "~/projects"
+        loc: "~/alx-askw/projects",
+        oldLoc: "~/projects",
     }
 
     return (
         <>
             <Navbar userLocation={userLocation}></Navbar>
-            <div className='projectsContainer bg-gray-800'>
-
-                <h1 className='projectHeader'>Projects - </h1>
+            <div className='projectsContainer'>
+                <Links></Links>
+                <ProjectBox></ProjectBox>
             </div>
+            {/* <div className='projectsContainer bg-gray-800'>
+                <h1 className='projectHeader'>Projects - </h1>
+            </div> */}
         </>
     )
 }

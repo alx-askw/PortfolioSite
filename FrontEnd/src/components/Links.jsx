@@ -20,13 +20,12 @@ function Links() {
     return (
         <>
             <div className="linkContainer bg-gray-800">
-                <h4>Links</h4>
+                <h4>Navigation</h4>
+                <h5 type='button' onClick={() => linkClickHandler("/home")}>•About Me</h5>
                 <h5 type='button' onClick={() => linkClickHandler("/projects")}>•Projects</h5>
-                <h5  >•GitHub</h5>
-                <a type="button" href="https://github.com/" target="_blank" rel="noopener noreferrer">test</a>
-                <h5 type='button' onClick={() => console.log("add Link")}>•LinkedIn</h5>
-                <img src='https://fontawesome.com/icons/linkedin?f=brands&s=solid'></img>
                 <h5 type='button' onClick={() => linkClickHandler("/CV")}>•CV</h5>
+                <h5 type='button' onClick={() => linkClickHandler("/socials")}>•Links</h5>
+
 
 
             </div>

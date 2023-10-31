@@ -1,0 +1,9 @@
+.projectImage {
+    float: left;
+    width: 160px;
+    height: 65px;
+}
+
+.projectText {
+    float: right;
+}

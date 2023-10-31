@@ -5,7 +5,8 @@ import AboutMe from './AboutMe';
 function Home() {
 
     const userLocation = {
-        loc: "~/portfolio/src/home"
+        loc: "~/alx-askw/portfolio",
+        oldLoc: "~/portfolio/src/home"
     }
 
     return (
