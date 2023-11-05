@@ -3,22 +3,17 @@
 
 import { jsonArrayCompare } from "./arrayComparisonFunctions";
 
-let test1 = []; //* Have to put it outside the function for persistence
+let userAttemptArray = []; //* Have to put it outside the function for persistence
 
 export const konamiCodeFunc = (e) => {
     const correctTest = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a", "Enter"]
-    test1.push(e.key);
-    // console.log(test1)
+    userAttemptArray.push(e.key);
     if (e.key === "Enter") {
-        if (jsonArrayCompare(test1, correctTest)) {
-            // console.log("konami success")
-            test1 = []
+        if (jsonArrayCompare(userAttemptArray, correctTest)) {
+            userAttemptArray = [] //clear the array
             return true;
         } else {
-            // console.log("failure")
-            // console.log(test1)
-            // console.log(correctTest)
-            test1 = []
+            userAttemptArray = [] //clear the array
             return false;
         }
     }

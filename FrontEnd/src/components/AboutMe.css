@@ -2,17 +2,18 @@
 
 .aboutContainer {
     /* margin: 225px 950px 150px 465px; */
-    border: 2px solid blue;
     /* width: 395px; */
     /* width: 550px; */
     width: 670px;
     border-radius: 7px;
-    border: #efe8e5 2px solid;
+    border: #efe8e5dc 2px solid;
     opacity: 0.93;
     color: #efe8e5;
     /* font-family: 'Courier New', Courier, monospace; */
-    font-family: monospace;
-    font-weight: lighter;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: normal;
+
+    box-shadow: 5px 5px 5px #efe8e58e;
 }
 
 

@@ -8,3 +8,15 @@
 	/* background: dark; */
 	color: whitesmoke;
 }
+
+
+
+/* https: //stackoverflow.com/questions/38528121/how-to-position-an-element-at-the-bottom-of-the-screen-on-load-but-not-make-it-f */
+.creditInfo {
+	position: absolute;
+	top: 100vh;
+	transform: translateY(-100%);
+	width: 100%;
+
+	color: #efe8e5;
+}
