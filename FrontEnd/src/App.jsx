@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
 import './App.css'
-import { Route, Routes, Navigate } from 'react-router-dom';
+import { Route, Routes, Navigate, useLocation } from 'react-router-dom';
 import { konamiCodeFunc } from '../utils/konamiCode';
 
-import { animated, useSpring } from '@react-spring/web';
+import { animated, useSpring, useTransition } from '@react-spring/web';
 
 
 //COMPONENTS IMPORT
@@ -13,7 +13,6 @@ import DevNavBar from './components/DevNavBar';
 import CV from './components/CV';
 import SocialLinks from './components/SocialLinks';
 
-import TestComp from './components/TestComp.jsx';
 
 //todo: refactor all of the components since a lot of them contain the same code/styling so clean this up
 
@@ -68,13 +67,6 @@ function App() {
   }
 
 
-
-  const [isVisible, setIsVisible] = useState(false);
-  const setVis = () => {
-    console.log(isVisible);
-    setIsVisible(!isVisible);
-  }
-
   // document.body.style.backgroundColor = 'rgb(31 41 55)'; //! perhaps don't keep this
   // document.body.style.backgroundImage = "url(../src/assets/test12.jpg)"; //! why do I have to go out then back in to get this to work?
   document.body.style.backgroundImage = backgroundPicture.image;
@@ -82,21 +74,42 @@ function App() {
   document.body.style.backgroundRepeat = "no-repeat";
 
 
+  const location = useLocation();
+  const transitions = useTransition(location, {
+    from: {
+      opacity: 0,
+      transform: 'translate3d(100%, 0, 0)'
+    },
+    enter: {
+      opacity: 1,
+      transform: 'translate3d(0%, 0, 0)'
+    },
+    leave: {
+      opacity: 0,
+      transform: 'translate3d(-50%, 0, 0)'
+    },
+    config: { friction: 800 },
+    exitBeforeEnter: true // https://stackoverflow.com/questions/68630220/react-spring-usetransition-on-carousel-style-component-causing-overlap-during-tr/71337663#71337663
+
+
+  })
+
+
   return (
     <>
-      <div className=' text-red-500'>
-        {devBarToggle && <DevNavBar setDevBarToggle={setDevBarToggle} setBackgroundPicture={setBackgroundPicture} backgroundImageVariations={backgroundImageVariations} />}
-        <Routes>
-          <Route path='/' element={<Navigate to="/home" />} />
-          <Route path='/home' element={<Home />} />
-          <Route path='/projects' element={<Projects />} />
-          <Route path='/CV' element={<CV />} />
-          <Route path='/socials' element={<SocialLinks />} />
-        </Routes>
-        <p className='creditInfo'>&copy; Site creation: Alx Askw | Photo credit: {backgroundPicture.author}</p>
-      </div >
-      <button onClick={setVis} style={{ color: "blue" }}>BUTTON</button>
-      <TestComp isVisible={isVisible}></TestComp>
+      {transitions((style, item) => (
+        <animated.div className=' text-red-500'>
+          {devBarToggle && <DevNavBar setDevBarToggle={setDevBarToggle} setBackgroundPicture={setBackgroundPicture} backgroundImageVariations={backgroundImageVariations} />}
+          <Routes>
+            <Route path='/' element={<Navigate to="/home" />} />
+            <Route path='/home' element={<Home />} />
+            <Route path='/projects' element={<Projects />} />
+            <Route path='/CV' element={<CV />} />
+            <Route path='/socials' element={<SocialLinks />} />
+          </Routes>
+          <p className='creditInfo'>&copy; Site creation: Alx Askw | Photo credit: {backgroundPicture.author}</p>
+        </animated.div >
+      ))}
     </ >
   )
 }
