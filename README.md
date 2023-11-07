@@ -1,4 +1,3 @@
-# Portfolio Site
+# Portfolio Site Old version
 
-### Under Construction!
-
+### I like the design so I will keep this older version for something later

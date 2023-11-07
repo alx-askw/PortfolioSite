@@ -1,9 +1,10 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import './App.css'
-import { Route, Routes, Navigate, useLocation } from 'react-router-dom';
+import { Route, Routes, Navigate, useLocation, Router } from 'react-router-dom';
 import { konamiCodeFunc } from '../utils/konamiCode';
 
 import { animated, useSpring, useTransition } from '@react-spring/web';
+import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 
 
 //COMPONENTS IMPORT
@@ -12,6 +13,7 @@ import Projects from './components/Projects';
 import DevNavBar from './components/DevNavBar';
 import CV from './components/CV';
 import SocialLinks from './components/SocialLinks';
+import TestComp from './components/TestComp.jsx';
 
 
 //todo: refactor all of the components since a lot of them contain the same code/styling so clean this up
@@ -84,22 +86,35 @@ function App() {
 
   })
 
+  const paraRef = useRef();
 
   return (
     <>
-      {transitions((style, item) => (
-        <animated.div className=' text-red-500'>
-          {devBarToggle && <DevNavBar setDevBarToggle={setDevBarToggle} setBackgroundPicture={setBackgroundPicture} backgroundImageVariations={backgroundImageVariations} />}
-          <Routes>
-            <Route path='/' element={<Navigate to="/home" />} />
-            <Route path='/home' element={<Home />} />
-            <Route path='/projects' element={<Projects />} />
-            <Route path='/CV' element={<CV />} />
-            <Route path='/socials' element={<SocialLinks />} />
-          </Routes>
-          <p className='creditInfo'>&copy; Site creation: Alx Askw | Photo credit: {backgroundPicture.author}</p>
-        </animated.div >
-      ))}
+      {/* {transitions((style, item) => ( */}
+      {/* <animated.div className=' text-red-500'> */}
+      <div className=' text-red-500'>
+        {devBarToggle && <DevNavBar setDevBarToggle={setDevBarToggle} setBackgroundPicture={setBackgroundPicture} backgroundImageVariations={backgroundImageVariations} />}
+        <Parallax pages={5} ref={paraRef}>
+          <ParallaxLayer offset={0} speed={0.5}>
+            <Home />
+          </ParallaxLayer>
+          <ParallaxLayer offset={1} speed={0.5}>
+            <Projects />
+          </ParallaxLayer>
+          <ParallaxLayer offset={2} speed={0.5}>
+            <CV />
+          </ParallaxLayer>
+          <ParallaxLayer offset={3} speed={0.5}>
+            <SocialLinks />
+          </ParallaxLayer>
+          <ParallaxLayer offset={4} speed={0.5}>
+            <TestComp />
+          </ParallaxLayer>
+        </Parallax>
+
+        <p className='creditInfo'>&copy; Site creation: Alx Askw | Photo credit: {backgroundPicture.author}</p>
+      </div >
+      {/* ))} */}
     </ >
   )
 }

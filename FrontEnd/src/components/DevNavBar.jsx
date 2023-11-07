@@ -6,7 +6,7 @@ function DevNavBar({ setDevBarToggle, setBackgroundPicture, backgroundImageVaria
     let Navigate = useNavigate();
 
     //todo: add a credits modal for images: unsplash, fontAwesome etc.
-
+    //todo; bug with parallax and not being able to close dev bar
     return (
         <>
             <div className='devContainer bg-red-900'>
