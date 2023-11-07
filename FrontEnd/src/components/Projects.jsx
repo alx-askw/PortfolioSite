@@ -3,6 +3,8 @@ import Navbar from './Navbar'
 import Links from './Links';
 import ProjectBox from './ProjectsPageComponents/ProjectBox';
 
+import { animated } from '@react-spring/web';
+
 function Projects() {
 
     //todo: add scroll function inside right hand side box (see CV page)
@@ -15,10 +17,10 @@ function Projects() {
     return (
         <>
             <Navbar userLocation={userLocation}></Navbar>
-            <div className='projectsContainer'>
+            <animated.div className='projectsContainer'>
                 <Links></Links>
                 <ProjectBox></ProjectBox>
-            </div>
+            </animated.div>
             {/* <div className='projectsContainer bg-gray-800'>
                 <h1 className='projectHeader'>Projects - </h1>
             </div> */}

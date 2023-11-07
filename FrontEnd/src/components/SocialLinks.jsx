@@ -3,6 +3,8 @@ import './SocialLinks.css';
 import Links from "./Links";
 import SocialBox from "./SocialBox";
 
+import { animated } from '@react-spring/web';
+
 
 function SocialLinks() {
 
@@ -12,10 +14,10 @@ function SocialLinks() {
     return (
         <>
             <Navbar userLocation={userLocation} />
-            <div className="socialContainer">
+            <animated.div className="socialContainer">
                 <Links></Links>
                 <SocialBox></SocialBox>
-            </div>
+            </animated.div>
         </>
     )
 }

@@ -76,19 +76,9 @@ function App() {
 
   const location = useLocation();
   const transitions = useTransition(location, {
-    from: {
-      opacity: 0,
-      transform: 'translate3d(100%, 0, 0)'
-    },
-    enter: {
-      opacity: 1,
-      transform: 'translate3d(0%, 0, 0)'
-    },
-    leave: {
-      opacity: 0,
-      transform: 'translate3d(-50%, 0, 0)'
-    },
-    config: { friction: 800 },
+    from: { transform: 'translate3d(-100%,0,0)' },
+    enter: { transform: 'translate3d(0%,0,0)' },
+    config: { tension: 210, friction: 260 },
     exitBeforeEnter: true // https://stackoverflow.com/questions/68630220/react-spring-usetransition-on-carousel-style-component-causing-overlap-during-tr/71337663#71337663
 
 

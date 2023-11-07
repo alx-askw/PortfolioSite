@@ -2,6 +2,9 @@ import Navbar from "./Navbar";
 import Links from "./Links";
 import CVBox from "./CVBox";
 
+import { animated } from '@react-spring/web';
+
+
 import './CV.css'
 
 
@@ -16,10 +19,10 @@ function CV() {
     return (
         <>
             <Navbar userLocation={userLocation}></Navbar>
-            <div className="cvContainer ">
+            <animated.div className="cvContainer ">
                 <Links></Links>
                 <CVBox></CVBox>
-            </div>
+            </animated.div>
         </>
     )
 }
