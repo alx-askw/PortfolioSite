@@ -9,11 +9,7 @@ function LandingPage({ scrollTo }) {
 
     const userLocation = { loc: "~/alx-askw/portfolio" }
 
-    const handleScroll = () => {
-        if (scrollTo) {
-            scrollTo(1);
-        }
-    }
+
     return (
         <div >
             <Navbar userLocation={userLocation}></Navbar>

@@ -1,7 +1,52 @@
 .socialContainer {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: start;
-    margin: 225px 465px auto 465px;
+    justify-content: center;
+    margin-top: 75px;
+    height: 40%;
+    gap: 35px;
+}
+
+
+.faArrow {
+    color: antiquewhite;
+}
+
+.upArrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0.65;
+    background: #2d3748;
+    border-radius: 50%;
+    margin-top: 15%;
+    margin-left: 46%;
+
+    height: 110px;
+    width: 110px;
+
+
+
+    box-shadow: 0 0 0 0 #1a202c;
+    transform: scale(2);
+    animation: pulse 2s infinite;
+}
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.466);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 100px rgba(0, 0, 0, 0.322);
+    }
+
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
 }

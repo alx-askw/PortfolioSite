@@ -46,7 +46,7 @@ function App() {
       link: "https://unsplash.com/photos/photography-of-white-boats-beside-bridge-during-nighttime-AdN1QHKJCck"
     }
   }
-  const [backgroundPicture, setBackgroundPicture] = useState(backgroundImageVariations.backgroundOne);
+  const [backgroundPicture, setBackgroundPicture] = useState(backgroundImageVariations.backgroundThree);
 
   //TODO##############################################################################
 
@@ -83,13 +83,19 @@ function App() {
             <AboutMe scrollTo={(offset) => paraRef.current?.scrollTo(offset)} />
           </ParallaxLayer>
           <ParallaxLayer offset={2} speed={0.5}>
-            <Projects />
+            {devBarToggle && <DevNavBar setDevBarToggle={setDevBarToggle} setBackgroundPicture={setBackgroundPicture} backgroundImageVariations={backgroundImageVariations} />}
+
+            <Projects scrollTo={(offset) => paraRef.current?.scrollTo(offset)} />
           </ParallaxLayer>
           <ParallaxLayer offset={3} speed={0.5}>
-            <CV />
+            {devBarToggle && <DevNavBar setDevBarToggle={setDevBarToggle} setBackgroundPicture={setBackgroundPicture} backgroundImageVariations={backgroundImageVariations} />}
+
+            <CV scrollTo={(offset) => paraRef.current?.scrollTo(offset)} />
           </ParallaxLayer>
           <ParallaxLayer offset={4} speed={0.5}>
-            <SocialLinks />
+            {devBarToggle && <DevNavBar setDevBarToggle={setDevBarToggle} setBackgroundPicture={setBackgroundPicture} backgroundImageVariations={backgroundImageVariations} />}
+
+            <SocialLinks scrollTo={(offset) => paraRef.current?.scrollTo(offset)} />
           </ParallaxLayer>
         </Parallax>
         <p className='creditInfo'>&copy; Site creation: Alx Askw | Photo credit: {backgroundPicture.author}</p>

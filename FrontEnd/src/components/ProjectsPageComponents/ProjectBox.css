@@ -11,4 +11,6 @@
     /* font-family: 'Courier New', Courier, monospace; */
     font-family: monospace;
     font-weight: lighter;
+    box-shadow: 5px 5px 5px #efe8e58e;
+    height: 75%;
 }

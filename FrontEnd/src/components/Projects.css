@@ -2,29 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-.projectsContainerOld {
-    font-family: 'Courier New', Courier, monospace;
-    color: #efe8e5;
-    font-size: 80px;
-    text-align: center;
-    line-height: 125px;
-    border-radius: 7px;
-    border: #efe8e5 2px solid;
-    opacity: 0.93;
-    /* margin: 225px 465px 150px 465px; matches navbar */
-    margin: 225px 350px 150px 350px;
-}
-
 
 .projectsContainer {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: start;
-    margin: 225px 465px auto 465px;
+    gap: 35px;
+    height: 97%;
+    margin-top: 75px;
 }
 
 
+.projects {
+    float: left;
+}
+
+
+
+.navigation {
+
+    width: 400px;
+    border-radius: 7px;
+    border: #efe8e5dc 2px solid;
+    opacity: 0.93;
+    color: #efe8e5;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: normal;
+    height: 33%;
+    box-shadow: 5px 5px 5px #efe8e58e;
+}
 
 
 .projectHeader {

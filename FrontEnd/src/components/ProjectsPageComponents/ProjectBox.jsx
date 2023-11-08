@@ -7,27 +7,27 @@ function ProjectBox() {
         one: {
             name: "Project 1",
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            imageLink: "https://reactjs.org/logo-og.png"
+            imageLink: "https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg"
         },
         two: {
             name: "Project 2",
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            imageLink: "https://reactjs.org/logo-og.png"
+            imageLink: "https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg"
         },
         three: {
             name: "Project 3",
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            imageLink: "https://reactjs.org/logo-og.png"
+            imageLink: "https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg"
         },
         four: {
             name: "Project 4",
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            imageLink: "https://reactjs.org/logo-og.png"
+            imageLink: "https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg"
         },
         five: {
             name: "Project 5",
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            imageLink: "https://reactjs.org/logo-og.png"
+            imageLink: "https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg"
         }
     }
 
