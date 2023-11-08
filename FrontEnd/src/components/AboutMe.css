@@ -1,32 +1,86 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext');
 
-.aboutContainer {
-    /* margin: 225px 950px 150px 465px; */
-    /* width: 395px; */
-    /* width: 550px; */
+.aboutMeBox {
+
     width: 670px;
+    /* height:; */
     border-radius: 7px;
     border: #efe8e5dc 2px solid;
     opacity: 0.93;
     color: #efe8e5;
-    /* font-family: 'Courier New', Courier, monospace; */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: normal;
+
+    position: relative;
 
     box-shadow: 5px 5px 5px #efe8e58e;
 }
 
 
-/*
+.photoAndNav {
+    gap: 35px;
+}
 
-about me on left
- border: 2px solid blue;
-    width: 395px;
+.aboutContainer {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    height: 75%;
+    margin-top: 75px;
+}
+
+
+.photo {
+    height: 20px;
+    border: white 2px solid;
+    margin-top: 35px;
+    height: 62%;
     border-radius: 7px;
-    border: #efe8e5 2px solid;
+    box-shadow: 5px 5px 5px #efe8e58e;
+    opacity: 0.93;
+}
+
+.navigation {
+
+    width: 400px;
+    border-radius: 7px;
+    border: #efe8e5dc 2px solid;
     opacity: 0.93;
     color: #efe8e5;
-    font-family: 'Courier New',
-    Courier,
-    monospace;
-     */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: normal;
+    height: 33%;
+    box-shadow: 5px 5px 5px #efe8e58e;
+}
+
+
+.navIcon {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 3px;
+    float: left;
+}
+
+
+.leftArrow {
+    animation: arrowMove 2s infinite;
+    margin-left: 10px;
+}
+
+.current {
+    float: left;
+}
+
+@keyframes arrowMove {
+    0% {
+        transform: translateX(0)
+    }
+
+    70% {
+        transform: translateX(15px)
+    }
+
+    100% {
+        transform: translateX(0)
+    }
+}

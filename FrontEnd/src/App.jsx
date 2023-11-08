@@ -1,9 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import './App.css'
-import { Route, Routes, Navigate, useLocation, Router } from 'react-router-dom';
 import { konamiCodeFunc } from '../utils/konamiCode';
-
-import { animated, useSpring, useTransition } from '@react-spring/web';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 
 
@@ -14,6 +11,8 @@ import DevNavBar from './components/DevNavBar';
 import CV from './components/CV';
 import SocialLinks from './components/SocialLinks';
 import TestComp from './components/TestComp.jsx';
+import LandingPage from './components/LandingPage.jsx';
+import AboutMe from './components/AboutMe.jsx';
 
 
 //todo: refactor all of the components since a lot of them contain the same code/styling so clean this up
@@ -52,15 +51,9 @@ function App() {
   //TODO##############################################################################
 
 
-  const devToggleHandler = (boolState) => {
-    setDevBarToggle(boolState);
-  }
-
   useEffect(() => {
     document.addEventListener('keydown', devBarHandler, true);
   }, []);
-
-
 
   const devBarHandler = (e) => {
     if (konamiCodeFunc(e) === true) {
@@ -68,53 +61,39 @@ function App() {
     }
   }
 
-
-  // document.body.style.backgroundColor = 'rgb(31 41 55)'; //! perhaps don't keep this
-  // document.body.style.backgroundImage = "url(../src/assets/test12.jpg)"; //! why do I have to go out then back in to get this to work?
   document.body.style.backgroundImage = backgroundPicture.image;
   document.body.style.backgroundSize = "cover";
   document.body.style.backgroundRepeat = "no-repeat";
 
 
-  const location = useLocation();
-  const transitions = useTransition(location, {
-    from: { transform: 'translate3d(-100%,0,0)' },
-    enter: { transform: 'translate3d(0%,0,0)' },
-    config: { tension: 210, friction: 260 },
-    exitBeforeEnter: true // https://stackoverflow.com/questions/68630220/react-spring-usetransition-on-carousel-style-component-causing-overlap-during-tr/71337663#71337663
+  const paraRef = useRef(); //! Need to short-circ the scrollTo prop
 
 
-  })
-
-  const paraRef = useRef();
 
   return (
     <>
-      {/* {transitions((style, item) => ( */}
-      {/* <animated.div className=' text-red-500'> */}
       <div className=' text-red-500'>
-        {devBarToggle && <DevNavBar setDevBarToggle={setDevBarToggle} setBackgroundPicture={setBackgroundPicture} backgroundImageVariations={backgroundImageVariations} />}
         <Parallax pages={5} ref={paraRef}>
           <ParallaxLayer offset={0} speed={0.5}>
-            <Home />
+            {devBarToggle && <DevNavBar setDevBarToggle={setDevBarToggle} setBackgroundPicture={setBackgroundPicture} backgroundImageVariations={backgroundImageVariations} />}
+            <LandingPage scrollTo={(offset) => paraRef.current?.scrollTo(offset)} />
           </ParallaxLayer>
           <ParallaxLayer offset={1} speed={0.5}>
-            <Projects />
+            {devBarToggle && <DevNavBar setDevBarToggle={setDevBarToggle} setBackgroundPicture={setBackgroundPicture} backgroundImageVariations={backgroundImageVariations} />}
+            <AboutMe scrollTo={(offset) => paraRef.current?.scrollTo(offset)} />
           </ParallaxLayer>
           <ParallaxLayer offset={2} speed={0.5}>
-            <CV />
+            <Projects />
           </ParallaxLayer>
           <ParallaxLayer offset={3} speed={0.5}>
-            <SocialLinks />
+            <CV />
           </ParallaxLayer>
           <ParallaxLayer offset={4} speed={0.5}>
-            <TestComp />
+            <SocialLinks />
           </ParallaxLayer>
         </Parallax>
-
         <p className='creditInfo'>&copy; Site creation: Alx Askw | Photo credit: {backgroundPicture.author}</p>
       </div >
-      {/* ))} */}
     </ >
   )
 }

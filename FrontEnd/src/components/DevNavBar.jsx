@@ -16,9 +16,13 @@ function DevNavBar({ setDevBarToggle, setBackgroundPicture, backgroundImageVaria
                 </div>
                 <div>
                     <h4>Jump Around</h4>
-                    <h6 type="button" onClick={() => Navigate("/home")}>•/home</h6>
+                    {/* <h6 type="button" onClick={() => Navigate("/home")}>•/home</h6>
                     <h6 type="button" onClick={() => Navigate("/projects")}>•/projects</h6>
-                    <h6 type="button" onClick={() => Navigate("/CV")}>•/CV</h6>
+                    <h6 type="button" onClick={() => Navigate("/CV")}>•/CV</h6> */}
+                    <h6 type="button" onClick={(e) => { e.stopPropagation(); console.log("1") }}>•/home</h6>
+                    <h6 type="button" onClick={(e) => { e.stopPropagation(); console.log("1") }}>•/projects</h6>
+                    <h6 type="button" onClick={(e) => { e.stopPropagation(); console.log("1") }}>•/CV</h6>
+
 
                 </div>
                 <div>
